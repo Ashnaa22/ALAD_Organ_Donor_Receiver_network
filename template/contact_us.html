@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="about_page">
+    <div class="Contact_body">
+        <!-- page image -->
+        <header id="page-header">
+            <div class="col-md-6 m-auto text-center text-light">
+                <h1>Contact Us</h1>
+                <p class="lead">Anybody Can Give Organ.
+                    <br>"People who donate organs are blessed as they give others a second chance at life for others. It
+                    is in your hands to pass on your life to someone who is in dire need of it."
+                </p>
+            </div>
+        </header>
+
+        <!-- address -->
+        <div class="address text-center">
+            <address class="p-5 font-weight-bold">{{ contact.contact_text }}</address>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
