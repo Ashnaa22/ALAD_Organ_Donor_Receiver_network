@@ -1,11 +1,13 @@
 /* index */
 .head {
-  background-color: #FF0000;
-  height: 60px;
+  background-color: blue;
+  height: 100px;
+
+  width: 100%;
 }
 
 .navbar {
-  background: white;
+  background: blue;
   height: 96px;
 }
 
@@ -55,7 +57,7 @@
 }
 
 .opacity_carousel {
-  background: rgb(0,0,0);
+  background: rgb(0, 0, 0);
   opacity: 0.4;
   width: 100%;
   height: 100%;
@@ -64,35 +66,48 @@
   left: 0;
   z-index: 10;
 }
-.carousel-control-prev, .carousel-control-next {
+
+.carousel-control-prev,
+.carousel-control-next {
   z-index: 11;
 }
 
 .post {
   width: auto;
   height: 500px;
-  margin-top: 150px;
+  margin-top: 20px;
 }
 
-.postimg, .postimg3 {
-  width: 450px;
+.postimg {
+  width: 100%;
   height: 233px;
   padding: 5px;
   margin-left: 30px;
 }
 
-.post_dec h2, .post_dec2 h2, .post_dec3 h2 {
-  color: #FF0000;
+.postimg3 {
+  max-width: 100%;
+  height: auto;
+  padding: 5px;
+  margin-left: 30px;
 }
 
-.post_dec, .post_dec3 {
+.post_dec h2,
+.post_dec2 h2,
+.post_dec3 h2 {
+  color: blue;
+}
+
+.post_dec,
+.post_dec3 {
   padding: 5px;
   margin-right: 30px;
   margin: 5px;
   width: 600px;
 }
 
-.post2, .post3 {
+.post2,
+.post3 {
   width: auto;
   height: 600px;
   margin-top: 300px;
@@ -113,7 +128,7 @@
 }
 
 .footer {
-  background-color: #FF0000;
+  background-color: blue;
   height: 120px;
   margin-top: 88px;
 }
@@ -199,4 +214,16 @@
 
 .about_page {
   height: 600px;
+}
+
+.container-fluid {
+  background-color: white;
+}
+
+header {
+  color: black;
+}
+
+body {
+  background-color: white;
 }

@@ -6,7 +6,7 @@ from .models import HomePageBody
 def homedisplay(request):
     our_vision = HomePageBody.objects.get(id_vision=1)
     donor_opinion = HomePageBody.objects.get(id_vision=2)
-    user_opinion = HomePageBody.objects.get(id_vision=3)
+    receiver_opinion = HomePageBody.objects.get(id_vision=3)
     
     
 
@@ -14,7 +14,7 @@ def homedisplay(request):
         
         'our_vision' : our_vision,
         'donor_opinion' : donor_opinion,
-        'user_opinion' : user_opinion,
+        'receiver_opinion' : receiver_opinion,
     }
 
     return render(request, 'donor_home.html', context)

@@ -1,9 +1,13 @@
 from django.db import models
 
+from django.contrib.auth.models import User
 
 #Donor resistration forms data table
 class DonorList(models.Model):
+    user_name = models.OneToOneField(User, on_delete=models.CASCADE, related_name='donor_lists',unique=True)   
+
     name = models.CharField(max_length = 50, blank=True, null=True)
+    
     gender_choices=[
         ('male',"Male"),
         ("female","Female"),
@@ -15,16 +19,16 @@ class DonorList(models.Model):
     date_of_birth = models.DateField(blank=True, null=True)
 
     organ_choices=[
-        ("all" , "All"),
-        ("kidney" , "Kidney"),
-        ("lung" , "Lung"),
-        ("liver" , "Liver"),
-        ("pancreas" , "Pancreas"),
-        ("intestine" , "Intestine"),
-        ("eye" , "Eye"),
+        
+        ("one_kidney" , "One_Kidney"),
+        ("a_Single_lob_from_lung" , "A_Single_lob_from_lung"),
+        ("a_portion_of_liver" , "A_portion_of_liver"),
+        ("a_portion_of_pancreas" , "A_portion_of_Pancreas"),
+        ("a_portion_of_intestine" , "A_portion_of_intestine"),
+        
     ]
     organ = models.CharField(
-        max_length=20, blank=True, null=True,
+        max_length=50, blank=True, null=True,
         choices=organ_choices
         )
     blood_choices=[
@@ -55,7 +59,7 @@ class DonorList(models.Model):
         )
     enter_identity_card_number = models.IntegerField(blank=True, null=True)
     phone_number = models.IntegerField(blank=True, null=True)
-    email = models.EmailField(max_length=100, blank=True, null=True, unique=True)
+    email = models.EmailField(max_length=100, blank=True, null=True)
     occupation = models.CharField(max_length=10, blank=True, null=True)
     home_address = models.TextField(blank=True, null=True)
     last_donate_date = models.CharField(max_length=50, blank=True, null=True)

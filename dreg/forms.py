@@ -1,3 +1,4 @@
+from enum import unique
 from django import forms
 from django.forms import ModelForm
 from .models import DonorList
@@ -9,6 +10,7 @@ class DonorRegistration(ModelForm):
         model = DonorList
         fields = '__all__'
         widgets = {
+
             'name' : forms.TextInput(attrs={'class':'form-control', 'required':'True'}),
             'gender' : forms.Select(attrs={'class':'form-control', 'required':'True'}),
             'date_of_birth' : forms.DateInput(attrs={'class':'form-control', 'type':'date', 'required':'True'}),

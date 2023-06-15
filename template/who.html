@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">REGISTER AS..</h5>
+        <a href="{% url 'dregsite' %}" class="btn btn-primary">DONOR</a>
+    </div>
+</div>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">REGISTER AS </h5>
+
+        <a href="{% url 'rregsite' %}" class="btn btn-primary">RECEIVER</a>
+    </div>
+</div>
+{% endblock %}

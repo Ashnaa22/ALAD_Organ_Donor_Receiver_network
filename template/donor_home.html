@@ -13,7 +13,6 @@
 
     <!-- post for blog -->
     <div class="post_dec float-right">
-        <h2 class="font-weight-bold">{{ our_vision.title }}</h2>
         <p class="text-break">{{ our_vision.body_text }}</p>
     </div>
 </div>
@@ -35,15 +34,14 @@
 <div class="post3 clearfix">
     <!-- post for image -->
     <div class="postimg3 float-left">
-        <img src="{{ user_opinion.body_img.url }}" class="img-thumbnail" alt="Post 1st image">
+        <img src="{{ receiver_opinion.body_img.url }}" class="img-thumbnail" alt="Post 1st image">
     </div>
     <!-- post for blog -->
     <div class="post_dec3 float-right">
-        <h2 class="font-weight-bold">{{ user_opinion.title }}</h2>
-        <p class="text-justify">{{ user_opinion.body_text }}</p>
+        <h2 class="font-weight-bold">{{ receiver_opinion.title }}</h2>
+        <p class="text-justify">{{ receiver_opinion.body_text }}</p>
     </div>
 </div>
-    
+
 
 {% endblock %}
-
